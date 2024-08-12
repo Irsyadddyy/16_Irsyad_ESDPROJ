@@ -1,0 +1,6 @@
+@_16_Irsyad_ESDPROJ_HostAddress = http://localhost:5153
+
+GET {{_16_Irsyad_ESDPROJ_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
