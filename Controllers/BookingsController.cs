@@ -42,8 +42,17 @@ namespace _16_Irsyad_ESDPROJ.Controllers
 
         // POST: api/Bookings
         [HttpPost]
-        public async Task<ActionResult<Booking>> PostBooking(Booking booking)
+        public async Task<ActionResult<Booking>> PostBooking(CreateBookingDto bookingDto)
         {
+            var booking = new Booking
+            {
+                FacilityDescription = bookingDto.FacilityDescription,
+                BookingDateFrom = bookingDto.BookingDateFrom,
+                BookingDateTo = bookingDto.BookingDateTo,
+                BookedBy = bookingDto.BookedBy,
+                BookingStatus = bookingDto.BookingStatus
+            };
+
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
