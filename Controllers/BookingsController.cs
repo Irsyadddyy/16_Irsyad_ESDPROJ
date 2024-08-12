@@ -47,7 +47,7 @@ namespace _16_Irsyad_ESDPROJ.Controllers
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetBooking", new { id = booking.Id }, booking);
+            return CreatedAtAction("GetBooking", new { id = booking.BookingID }, booking);
         }
 
         // PUT: api/Bookings/5
@@ -108,7 +108,7 @@ namespace _16_Irsyad_ESDPROJ.Controllers
 
         private bool BookingExists(int id)
         {
-            return _context.Bookings.Any(e => e.Id == id);
+            return _context.Bookings.Any(e => e.BookingID == id);
         }
     }
 }

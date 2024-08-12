@@ -54,7 +54,7 @@ namespace _16_Irsyad_ESDPROJ.Migrations
                 name: "Bookings",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    BookingID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FacilityDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BookingDateFrom = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -64,7 +64,7 @@ namespace _16_Irsyad_ESDPROJ.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Bookings", x => x.Id);
+                    table.PrimaryKey("PK_Bookings", x => x.BookingID);
                 });
 
             migrationBuilder.CreateTable(

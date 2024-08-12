@@ -12,7 +12,7 @@ using _16_Irsyad_ESDPROJ.Data;
 namespace _16_Irsyad_ESDPROJ.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240811135106_InitialCreate")]
+    [Migration("20240812133552_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -225,11 +225,11 @@ namespace _16_Irsyad_ESDPROJ.Migrations
 
             modelBuilder.Entity("_16_Irsyad_ESDPROJ.Models.Booking", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("BookingID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingID"));
 
                     b.Property<string>("BookedBy")
                         .IsRequired()
@@ -249,7 +249,7 @@ namespace _16_Irsyad_ESDPROJ.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("BookingID");
 
                     b.ToTable("Bookings");
                 });

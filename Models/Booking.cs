@@ -5,7 +5,8 @@ namespace _16_Irsyad_ESDPROJ.Models
 {
     public class Booking
     {
-        public int Id { get; set; }
+        [Key]
+        public int BookingID { get; set; }
 
         [Required]
         public string FacilityDescription { get; set; }
