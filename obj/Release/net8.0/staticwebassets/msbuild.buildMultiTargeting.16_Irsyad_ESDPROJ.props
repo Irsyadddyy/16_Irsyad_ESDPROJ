@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\16_Irsyad_ESDPROJ.props" />
+</Project>

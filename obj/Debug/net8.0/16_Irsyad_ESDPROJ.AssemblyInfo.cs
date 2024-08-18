@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("16_Irsyad_ESDPROJ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39d62357b5d56bfe229b650f39d1956c3d111926")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d954df96f61512024d657277fdcf0c6a8207de46")]
 [assembly: System.Reflection.AssemblyProductAttribute("16_Irsyad_ESDPROJ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("16_Irsyad_ESDPROJ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
