@@ -142,3 +142,4 @@ C:\Users\muhd0\OneDrive\Desktop\ITE\ESD\Project\16_Irsyad_ESDPROJ\16_Irsyad_ESDP
 C:\Users\muhd0\OneDrive\Desktop\ITE\ESD\Project\16_Irsyad_ESDPROJ\16_Irsyad_ESDPROJ\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\muhd0\OneDrive\Desktop\ITE\ESD\Project\16_Irsyad_ESDPROJ\16_Irsyad_ESDPROJ\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\muhd0\OneDrive\Desktop\ITE\ESD\Project\16_Irsyad_ESDPROJ\16_Irsyad_ESDPROJ\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\muhd0\OneDrive\Desktop\ITE\ESD\Project\16_Irsyad_ESDPROJ\16_Irsyad_ESDPROJ\obj\Debug\net8.0\16_Irsyad_ESDPROJ.sourcelink.json

@@ -19,12 +19,52 @@ namespace _16_Irsyad_ESDPROJ.Controllers
             _context = context;
         }
 
-        // GET: api/Bookings
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings()
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBookings(string facilityDescription = null)
         {
-            return await _context.Bookings.ToListAsync();
+            IQueryable<Booking> query = _context.Bookings;
+
+            if (!string.IsNullOrEmpty(facilityDescription))
+            {
+                query = query.Where(b => b.FacilityDescription.Contains(facilityDescription));
+            }
+
+            return await query.ToListAsync();
         }
+
+        [HttpGet("TopFacilities")]
+        public IActionResult GetTopFacilities()
+        {
+            var topFacilities = new List<object>
+    {
+        new
+        {
+            FacilityID = 1,
+            FacilityName = "Grand Conference Hall",
+            Description = "The spacious and well-designed conference room features advanced audiovisual equipment, comfortable ergonomic seating, and adaptable lighting, " +
+            "all arranged to create an ideal setting for productive meetings and collaborative sessions.",
+            Seatings = 250
+        },
+        new
+        {
+            FacilityID = 2,
+            FacilityName = "Cozy Meeting Room",
+            Description = "A warm and inviting meeting room designed to accommodate smaller groups, " +
+            "offering a comfortable and intimate environment where participants can engage in meaningful discussions and collaborate effectively.",
+            Seatings = 10
+        },
+        new
+        {
+            FacilityID = 3,
+            FacilityName = "Scenic Outdoor Plaza",
+            Description = "An expansive outdoor event space that boasts a captivating and picturesque view, " +
+            "offering a scenic and enchanting backdrop that elevates the atmosphere and charm of any gathering, whether it's a wedding, corporate event, or casual celebration.",
+            Seatings = 300
+        }
+    };
+            return Ok(topFacilities);
+        }
+
 
         // GET: api/Bookings/5
         [HttpGet("{id}")]
