@@ -13,5 +13,7 @@ namespace _16_Irsyad_ESDPROJ.Data
         }
 
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Facility> Facilities { get; set; }
+
     }
 }
