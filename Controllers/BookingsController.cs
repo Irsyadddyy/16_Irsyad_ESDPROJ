@@ -36,6 +36,41 @@ namespace _16_Irsyad_ESDPROJ.Controllers
         public IActionResult GetTopFacilities()
         {
             var topFacilities = new List<object>
+        {
+            new
+            {
+                FacilityID = 1,
+                FacilityName = "Grand Conference Hall",
+                Description = "The spacious and well-designed conference room features advanced audiovisual equipment, comfortable ergonomic seating, and adaptable lighting, " +
+                "all arranged to create an ideal setting for productive meetings and collaborative sessions.",
+                Seatings = 250
+            },
+            new
+            {
+                FacilityID = 2,
+                FacilityName = "Cozy Meeting Room",
+                Description = "A warm and inviting meeting room designed to accommodate smaller groups, " +
+                "offering a comfortable and intimate environment where participants can engage in meaningful discussions and collaborate effectively.",
+                Seatings = 10
+            },
+            new
+            {
+                FacilityID = 3,
+                FacilityName = "Scenic Outdoor Plaza",
+                Description = "An expansive outdoor event space that boasts a captivating and picturesque view, " +
+                "offering a scenic and enchanting backdrop that elevates the atmosphere and charm of any gathering, whether it's a wedding, corporate event, or casual celebration.",
+                Seatings = 300
+            }
+        };
+                    return Ok(topFacilities);
+                }
+
+
+
+        [HttpGet("AllFacilities")]
+        public IActionResult GetAllFacilities()
+        {
+            var allFacilities = new List<object>
     {
         new
         {
@@ -60,9 +95,49 @@ namespace _16_Irsyad_ESDPROJ.Controllers
             Description = "An expansive outdoor event space that boasts a captivating and picturesque view, " +
             "offering a scenic and enchanting backdrop that elevates the atmosphere and charm of any gathering, whether it's a wedding, corporate event, or casual celebration.",
             Seatings = 300
-        }
+        },
+            new
+            {
+                FacilityID = 4,
+                FacilityName = "Executive Boardroom",
+                Description = "A sophisticated and well-appointed boardroom designed for high-level meetings and presentations. " +
+                "Equipped with state-of-the-art technology, ergonomic seating, and a sleek ambiance, it provides the perfect setting for important business discussions and decision-making processes.",
+                Seatings = 20
+            },
+            new
+            {
+                FacilityID = 5,
+                FacilityName = "Versatile Training Center",
+                Description = "A flexible and modern space ideal for workshops, seminars, and training sessions. " +
+                "With modular furniture, interactive whiteboards, and breakout areas, this facility can be easily configured to accommodate various learning and collaboration styles.",
+                Seatings = 50
+            },
+            new
+            {
+                FacilityID = 6,
+                FacilityName = "Grand Ballroom",
+                Description = "An opulent and spacious ballroom perfect for large-scale events such as galas, weddings, and corporate functions. " +
+                "Featuring crystal chandeliers, a grand stage, and state-of-the-art sound and lighting systems, this venue promises to make any event truly memorable.",
+                Seatings = 500
+            },
+            new
+            {
+                FacilityID = 7,
+                FacilityName = "Intimate Seminar Room",
+                Description = "A cozy and focused environment designed for small group discussions, presentations, and brainstorming sessions. " +
+                "With comfortable seating, excellent acoustics, and a warm atmosphere, this room encourages engagement and productive exchanges.",
+                Seatings = 30
+            },
+            new
+            {
+                FacilityID = 8,
+                FacilityName = "Tech Hub",
+                Description = "A cutting-edge facility tailored for tech-focused events, hackathons, and digital presentations. " +
+                "Equipped with high-speed internet, multiple power outlets, and advanced AV equipment, this space is perfect for showcasing innovations and fostering collaborative tech projects.",
+                Seatings = 100
+            }
     };
-            return Ok(topFacilities);
+            return Ok(allFacilities);
         }
 
 
